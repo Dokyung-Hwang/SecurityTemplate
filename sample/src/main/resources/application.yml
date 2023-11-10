@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sign?serverTimezone=UTC&characterEncoding=UTF-8
+    username: smiledk
+    password: 1112
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create  # (1) ??? ?? ??
+    show-sql: true      # (2) SQL ?? ??
+    properties:
+      hibernate:
+        format_sql: true  # (3) SQL pretty print
+
+logging:
+  level:
+    org:
+      springframework:
+        orm:
+          jpa: DEBUG
+server:
+  servlet:
+    encoding:
+      force-response: true
